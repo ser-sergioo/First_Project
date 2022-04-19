@@ -1,0 +1,8 @@
+from functools import reduce
+
+
+def is_divisible_by_6(number):
+   num = abs(number)
+   if int(str(num)[-1]) % 2 == 0 and reduce(lambda x, y: int(x) + int(y), str(num), 0) % 3 == 0:
+        return f'Число {number} делится на 6'
+    return f'Число {number} неделимо на 6'
